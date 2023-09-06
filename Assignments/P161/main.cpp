@@ -66,7 +66,8 @@ int RedGreen(int lights[], int a) {
         Orange[i] = false;
     }
     // Once all lights have turned red check to see at what time all lights turn green again.
-    
+
+    //(j >= high) {
     for (int k = 0; k < a; k++) {
       if(Green[k])
         n++;
@@ -75,8 +76,8 @@ int RedGreen(int lights[], int a) {
     if (n == a)
       // returns how many seconds it took for all lights to turn green.
       return j;
-    
     }
+    //}
   }
   return 0; // If no time in 5 hours where all lights are green return 0.
 };
