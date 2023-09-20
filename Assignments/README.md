@@ -2,6 +2,6 @@
 
 |   #   | Folder Link | Assignment Description |
 | :---: | ----------- | ---------------------- |
-|   1   | [P10055](./P10055)    | Hashmat          |
-|   2   | [P161](./P161)    | Traffic Lights          |
-|   3   | [P10226](./P10226)    | Hardwood Species          |
+|   1   | [A03](./A03)    | Hashmat          |
+|   2   | [A05](./A05)    | Traffic Lights          |
+|   3   | [A06](./A06)    | Hardwood Species          |
