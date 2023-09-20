@@ -6,7 +6,7 @@ int main() {
     int size, x, y;
     bool same = true;
 
-    while(cin>>x) {
+    while(cin >> x) {
       size = y = x;
       
       while(x != 0) {
