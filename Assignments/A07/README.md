@@ -11,7 +11,7 @@ Solution for Rails Problem.
 |   1   | [main.cpp](./main.cpp)     | solution file.                                             |
 |   2   | [Data](./Data)             | Test input file from problem statement                     |
 |   3   | [Data2](./Data2)           | Larger test input from udebug                              |
-|   4   | [514.pdf](./514.pdf)       | Hardwood Species problem instructions pdf                  |
+|   4   | [514.pdf](./514.pdf)       | Rails problem instructions pdf                  |
 
 ### Instructions
 

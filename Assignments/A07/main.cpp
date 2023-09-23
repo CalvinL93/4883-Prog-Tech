@@ -1,61 +1,78 @@
 #include <iostream>
 #include <stack>
+#include <queue>
 
 using namespace std;
 
 int main() {
     int size, x, y, z;
-    stack<int> cars;
-    //bool same = true;
+    stack<int> carsIn;
+    queue<int> carsOut;
 
     while(cin >> x) {
       size = y = x;
-      
-      while(x != 0) {
-        cin >> x;
-        if (z < size) {
-          cars.push(z);
-          z++;
-          break;
-        }
-        if(x == z) {
-          cars.pop();
-          y--;
-        }
-        if(y != 0) {
-          if(z != size) {
-            cars.push(z);
-            z++;
-          }
-          else {
-            cout << "No\n";
+
+      // Continue for current amount of trains.
+      while (x != 0) {
+        carsIn.push(1);
+
+        // Read in trains to leave station and compare to see whats available.
+        for (int i = 0; i < size; i++) {
+          cin >> x;
+          
+          if (x == 0)
             break;
+          
+          carsOut.push(x);
+          
+          while (y > 0 && !carsOut.empty() && !carsIn.empty()) {
+            if (carsOut.front() == carsIn.top()) {
+              carsOut.pop();
+              carsIn.pop();
+              y--;
+            }
+            else
+              break;
+          }
+          
+          if ((i + 2) <= size) 
+            carsIn.push(i + 2);
+        }
+        
+        if (x == 0)
+          break;
+
+        // Empty train stack if it matches queue
+        while (y != 0) {
+          if (carsOut.front() == carsIn.top()) {
+            carsOut.pop();
+            carsIn.pop();
+            y--;
+            
+          }
+          else
+            break;
+        }
+
+        if(y == 0)
+          cout << "Yes\n";
+          
+        // If fail emtpy carsOut queue
+        else if(y < 0 || y > 0) {
+          cout << "No\n";
+          while (!carsOut.empty()) {
+            carsOut.pop();
           }
         }
-        if (y == 0 && z == size) {
-          cout << "Yes\n";
-        }
+        
+        // Reset y to size for next iteration
+        y = size;
       }
 
-      // while(x != 0) {
-      //   while(size != 0) {
-      //     cin >> x;
-      //     if (x == 0) 
-      //       break;
-      //     if (x != size) {
-      //       same = false;
-      //     }
-      //     size--;
-      //   }
-      //   if (x == 0) 
-      //       break;
-      //   if (size == 0 && same != false) 
-      //     cout << "Yes\n";
-      //   if (same == false)
-      //     cout << "No\n";
-      //   size = y;
-      //   same = true;
-      // }
+      // Create proper amount of new lines
+      if(y == 0 && x == 0)
+      {}
+      else
         cout << "\n";
     } 
 }
