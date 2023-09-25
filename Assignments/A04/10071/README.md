@@ -1,8 +1,8 @@
-## 10035
+## 10071
 ### Calvin Leavy
 ### Description:
 
-Solution for Primary Arithmetic Problem
+Solution for Back to High School Physics Problem
 
 ### Files
 
@@ -10,8 +10,7 @@ Solution for Primary Arithmetic Problem
 | :---: | -------------------------- | ---------------------------------------------------------- |
 |   1   | [main.cpp](./main.cpp)     | Solution file.                                             |
 |   2   | [data](./data)             | Test input file from problem statement                     |
-|   3   | [data2](./data2)           | Larger test input from udebug                              |
-|   4   | [10035.pdf](./10035.pdf)     | Primary Arthmetic problem instructions pdf                     |
+|   3   | [10071.pdf](./10071.pdf)     | Back to High School Physics problem instructions pdf                     |
 
 ### Instructions
 
