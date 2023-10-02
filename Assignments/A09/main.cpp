@@ -4,90 +4,68 @@
 
 using namespace std;
 
-// Define a structure to represent a graph (adjacency list)
-struct Graph {
-    int vertices;
-    vector<vector<int>> adjList;
+int n = 25;
 
-    Graph(int V) : vertices(V) {
-        adjList.resize(vertices);
+const int dx[] = {-1, 1, 0, 0, -1, 1, -1, 1};
+const int dy[] = {0, 0, -1, 1, -1, -1, 1, 1};
+
+void bfs(int row, int col, vector<vector<char>>& grid) {
+    queue<pair<int, int>> q;
+    q.push({row, col});
+
+    while (!q.empty()) {
+        int r = q.front().first;
+        int c = q.front().second;
+        q.pop();
+
+        grid[r][c] = '0'; // Mark the cell as visited
+
+        for (int i = 0; i < 8; ++i) {
+            int newRow = r + dx[i];
+            int newCol = c + dy[i];
+
+            if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n && grid[newRow][newCol] == '1') {
+                q.push({newRow, newCol});
+                grid[newRow][newCol] = '0'; // Mark the neighbor as visited
+            }
+        }
     }
+}
 
-    // Function to add an edge to the graph
-    void addEdge(int u, int v) {
-        adjList[u].push_back(v);
-    }
+int count_connected_components(vector<vector<char>>& grid) {
+    n = grid.size();
+    int components = 0;
 
-    // BFS traversal starting from a given vertex
-    void BFS(int start) {
-        vector<bool> visited(vertices, false);
-        queue<int> q;
-
-        visited[start] = true;
-        q.push(start);
-
-        while (!q.empty()) {
-            int current = q.front();
-            q.pop();
-
-            cout << current << " "; // Process the current vertex
-
-            for (int neighbor : adjList[current]) {
-                if (!visited[neighbor]) {
-                    visited[neighbor] = true;
-                    q.push(neighbor);
-                }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (grid[i][j] == '1') {
+                bfs(i, j, grid);
+                components++;
             }
         }
     }
 
-    // Perform BFS traversal from all unvisited vertices
-    void performBFS() {
-        vector<bool> visited(vertices, false);
-
-        // Start BFS from each unvisited vertex
-        for (int i = 0; i < vertices; ++i) {
-            if (!visited[i]) {
-                cout << "Starting BFS from vertex " << i << ": ";
-                BFS(i);
-                cout << endl;
-            }
-        }
-    }
-};
+    return components;
+}
 
 int main() {
-    int x, y, z;
+  vector<vector<char>> grid(25, vector<char>(25));
+    int size, it = 0;
+    char x;
 
-    while(cin >> z) {
-        Graph g(z);
+    while(cin >> size) {
+        for (int i = 0; i < size; i++) {
+            vector<int> row;
+            for (int j = 0; j < size; j++) {
+                cin >> x;
+                grid[i][j] = x;
+            }
+        }
 
-        // for(int i = 0; i < z; i++) {
-        //     for (int j = 0; j < z; j++) {
-        //         cin >> x >> y;
-        //         g.addEdge(x, y);
-        //     }
-        // }
+      it++;
 
-        g.addEdge(10, 9);
-        g.addEdge(1, 2);
-        g.addEdge(1, 3);
-        g.addEdge(1, 4);
-        g.addEdge(1, 5);
-        g.addEdge(1, 6);
-        g.addEdge(1, 7);
-        g.addEdge(1, 8);
-        g.addEdge(1, 9);
-        g.addEdge(1, 10);
-        g.addEdge(10, 4);
-        g.addEdge(2, 3);
-        g.addEdge(4, 5);
-        g.addEdge(4, 8);
-        g.addEdge(5, 8);
-        //g.addEdge(0, 0);
-
-
-        g.BFS(0);
+      int components = count_connected_components(grid);
+      cout << "Image number " << it << " contains " << components << " war eagles.\n";
 
     }
 }
