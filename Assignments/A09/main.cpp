@@ -4,8 +4,9 @@
 
 using namespace std;
 
-int n = 25;
+int n = 25; // Max size of grid
 
+// Define possible moves to adjacent cells
 const int dx[] = {-1, 1, 0, 0, -1, 1, -1, 1};
 const int dy[] = {0, 0, -1, 1, -1, -1, 1, 1};
 
@@ -20,18 +21,20 @@ void bfs(int row, int col, vector<vector<char>>& grid) {
 
         grid[r][c] = '0'; // Mark the cell as visited
 
+        // Check neighboring cells for more 1's
         for (int i = 0; i < 8; ++i) {
             int newRow = r + dx[i];
             int newCol = c + dy[i];
 
             if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < n && grid[newRow][newCol] == '1') {
-                q.push({newRow, newCol});
+                q.push({newRow, newCol}); // Add new 1 to queue to be explored
                 grid[newRow][newCol] = '0'; // Mark the neighbor as visited
             }
         }
     }
 }
 
+// count connections
 int count_connected_components(vector<vector<char>>& grid) {
     n = grid.size();
     int components = 0;
