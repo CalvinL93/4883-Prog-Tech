@@ -8,4 +8,4 @@
 |   4   | [A06](./A06)    | Hardwood Species          |
 |   5   | [A07](./A07)    | Rails         |
 |   6   | [A08](./A08)    | Clock Hands         |
-|   6   | [A09](./A09)    | The Seasonal War         |
+|   7   | [A09](./A09)    | The Seasonal War         |
