@@ -7,3 +7,4 @@
 |   3   | [10370](./10370)    | Above Average          |
 |   4   | [11636](./11636)    | Hello World!         |
 |   5   | [11727](./11727)    | Cost Cutting         |
+|   6   | [11547](./11547)    | Automatic Answer        |

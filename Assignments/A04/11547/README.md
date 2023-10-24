@@ -1,8 +1,8 @@
-## 11636
+## 11547
 ### Calvin Leavy
 ### Description:
 
-Solution for Hello World! problem
+Solution for Automatic Answer problem
 
 ### Files
 
@@ -10,8 +10,7 @@ Solution for Hello World! problem
 | :---: | -------------------------- | ---------------------------------------------------------- |
 |   1   | [main.cpp](./main.cpp)     | Solution file.                                             |
 |   2   | [data](./data)             | Test input file from problem statement                     |
-|   3   | [data2](./data2)             | Larger Test input file from problem statement                     |
-|   4   | [11636.pdf](./11636.pdf)     | Hello World! problem instructions pdf                     |
+|   3   | [11547.pdf](./11547.pdf)     | Automatic Answer problem instructions pdf                     |
 
 ### Instructions
 
