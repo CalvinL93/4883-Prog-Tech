@@ -1,8 +1,8 @@
-## 11727
+## 11799
 ### Calvin Leavy
 ### Description:
 
-Solution for Cost Cutting problem
+Solution for Horror Dash problem
 
 ### Files
 
@@ -10,8 +10,7 @@ Solution for Cost Cutting problem
 | :---: | -------------------------- | ---------------------------------------------------------- |
 |   1   | [main.cpp](./main.cpp)     | Solution file.                                             |
 |   2   | [data](./data)             | Test input file from problem statement                     |
-|   3   | [data2](./data2)             | Larger Test input file from problem statement                     |
-|   4   | [11727.pdf](./11727.pdf)     | Cost Cutting problem instructions pdf                     |
+|   3   | [11799.pdf](./11799.pdf)     | Horror Dash problem instructions pdf                     |
 
 ### Instructions
 

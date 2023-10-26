@@ -8,3 +8,4 @@
 |   4   | [11636](./11636)    | Hello World!         |
 |   5   | [11727](./11727)    | Cost Cutting         |
 |   6   | [11547](./11547)    | Automatic Answer        |
+|   7   | [11799](./11799)    | Horror Dash        |
