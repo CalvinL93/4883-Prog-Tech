@@ -2,7 +2,7 @@
 ### Calvin Leavy
 ### Description:
 
-Solution for The Seasonal War problem.
+Solution for The Seasonal War problem using Breadth-First-Search(BFS).
 
 ### Files
 

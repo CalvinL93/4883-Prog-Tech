@@ -9,3 +9,4 @@
 |   5   | [11727](./11727)    | Cost Cutting         |
 |   6   | [11547](./11547)    | Automatic Answer        |
 |   7   | [11799](./11799)    | Horror Dash        |
+|   8   | [11764](./11764)    | Jumping Mario        |

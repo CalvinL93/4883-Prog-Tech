@@ -2,7 +2,7 @@
 ### Calvin Leavy
 ### Description:
 
-Solution for The tourist guide problem using dijkstra's algorithm.
+Solution for The Tourist Guide problem using dijkstra's algorithm for the shortest path.
 
 ### Files
 
@@ -11,7 +11,7 @@ Solution for The tourist guide problem using dijkstra's algorithm.
 |   1   | [main.cpp](./main.cpp)     | solution file.                                             |
 |   2   | [Data](./Data)             | Test input file from problem statement                     |
 |   3   | [Data2](./Data2)           | Larger test input from udebug                              |
-|   4   | [10099.pdf](./10099.pdf)       | The Seasonal War problem instructions pdf                  |
+|   4   | [10099.pdf](./10099.pdf)       | The Tourist Guide problem instructions pdf                  |
 
 ### Instructions
 
