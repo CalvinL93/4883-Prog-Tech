@@ -1,8 +1,8 @@
-## 10370
+## 11547
 ### Calvin Leavy
 ### Description:
 
-Solution for Above Average Problem
+Solution for Automatic Answer problem
 
 ### Files
 
@@ -10,8 +10,7 @@ Solution for Above Average Problem
 | :---: | -------------------------- | ---------------------------------------------------------- |
 |   1   | [main.cpp](./main.cpp)     | Solution file.                                             |
 |   2   | [data](./data)             | Test input file from problem statement                     |
-|   2   | [data2](./data2)             | Larger Test input file from problem statement                     |
-|   4   | [10370.pdf](./10370.pdf)     | Back to High School Physics problem instructions pdf                     |
+|   3   | [11547.pdf](./11547.pdf)     | Automatic Answer problem instructions pdf                     |
 
 ### Instructions
 
