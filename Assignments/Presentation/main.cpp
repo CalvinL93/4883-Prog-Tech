@@ -11,6 +11,7 @@ void recursiveF(int source, int destination, unordered_set<int>& nodesWithAP, in
   // Aiports connected to source
   // for (int j = 0; j < graph[source].size(); j++) {
   //   //cout << graph[i][j] << " ";
+  //   cout << "Airports connected to " << source ": ";
   //   if (graph[source][j] == 1) 
   //     cout << j + 1 << " ";
   // }
@@ -19,7 +20,7 @@ void recursiveF(int source, int destination, unordered_set<int>& nodesWithAP, in
       if (graph[source][i] == destination) {
         if (nodesWithAP.count(destination) == 0) 
           airportsEstablished ++;
-        rFound = true;
+        rFound = true; 
         cout << "Route found\n";
         return;
       }
@@ -35,9 +36,11 @@ void recursiveF(int source, int destination, unordered_set<int>& nodesWithAP, in
       if (graph[source][i] == 1 && visited[graph[source][i]] == false) {
         cout << "\nVisiting Airport " << graph[source][i] + 1 << "\n";
 
-        cout << "AIRPORT " << graph[source][i] + 1 << " MARKED AS VISITED\n";
+        cout << "Airport " << graph[source][i] + 1 << " marked as visited\n";
         visited[graph[source][i]] = true;
         recursiveF(graph[source][i], destination, nodesWithAP, airportsEstablished, visited, rFound);
+
+        cout << "Return to Airport " << graph[source][i] << "\n";
 
         // If route is found add check if connection has an aiport and update airports established if not
         if(rFound == true && nodesWithAP.count(destination) == 0) {
@@ -75,7 +78,7 @@ int findRoute2(int source, int destination, vector<int>&citiesWithAP, int cities
       }
       cout << "\n\n";
 
-  cout << "initial call s=" << source << " d=" << destination << "\n";
+  //cout << "initial call s=" << source << " d=" << destination << "\n";
   
   recursiveF(source - 1, destination - 1, nodesWithAP, airportsEstablished, visited, rFound);
 
@@ -85,6 +88,7 @@ int findRoute2(int source, int destination, vector<int>&citiesWithAP, int cities
     return -1; // No route could be found
 }
 
+  
 // run with ./main < data
 int main() {
   int it, s, e, cities, routes, cityAirports, c = 0;
@@ -123,10 +127,9 @@ int main() {
     for (int i = 0; i < requests; i++) {
       cin >> s >> e;
       cout << "Requested Airport " << s << " to " << e << "\n";
-      //int ap = dijkstra(s - 1, e - 1, citiesWithAP, cities);
       int ap = findRoute2(s, e, citiesWithAP, cities);
       if (ap > -1) {
-        cout << "routes established " << ap << "\n";
+        cout << "Routes established " << ap << "\n";
       }
       else
         cout << "Impossible to establish route\n";
@@ -135,6 +138,7 @@ int main() {
   }
 }
 
+//int ap = dijkstra(s - 1, e - 1, citiesWithAP, cities);
 // Returns the correct results for initial dataset (data) by coincidence but is wrong for other test inputs (data2)
 // int dijkstra(int source, int destination, vector<int>& citiesWithAP, int cities) {
 //     //int cities = graph.size();
