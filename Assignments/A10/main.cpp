@@ -41,7 +41,7 @@ int dijkstra(vector<vector<Edge>> &graph, int source, int destination) {
                 pq.push({min_capacity, v});
             }
         }
-    }
+    } 
 
     return 0;
 }
@@ -56,7 +56,6 @@ int main() {
         if (cities == 0 && roads == 0)
           break;
 
-        
         // create vector for cities
         vector<vector<Edge>> paths(cities + 1);
 
@@ -75,5 +74,6 @@ int main() {
 
         cout << "Scenario #" << ++it << "\nMinimum Number of Trips = " << trips << "\n\n";
     }
+    
     return 0;
 }  

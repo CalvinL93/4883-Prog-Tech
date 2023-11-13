@@ -62,6 +62,7 @@ int main() {
   int stations, connections, cost, weight;
   string start, end, firstStation;
 
+  // Map to store station names and their corresponding indices
   map<string, int> stationIndex;
 
   while (true) {
@@ -72,6 +73,7 @@ int main() {
 
     vector<vector<Edge>> graph(stations);
 
+    // Clear the station index map for the current iteration
     stationIndex.clear();
 
     for (int i = 0; i < stations; ++i) {
@@ -80,6 +82,7 @@ int main() {
         stationIndex[stationName] = i; // Map station names to their indices
     }
 
+    
     for (int i = 0; i < connections; ++i) {
       cin >> start >> end >> weight;
       graph[stationIndex[start]].push_back({stationIndex[end], weight});
@@ -88,6 +91,7 @@ int main() {
 
     cin >> firstStation;
 
+    // Use prims algorithm to find the minimum cost
     cost = prim(graph, stationIndex[firstStation]);
 
     if (cost != -1)
