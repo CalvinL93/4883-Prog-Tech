@@ -125,6 +125,7 @@ int main() {
       }
       else
         cout << "Signals fail to synchronise in 5 hours\n";
+        
       // empties lights array for next set of data and resets input counter.
       fill(begin(lights),end(lights), 0);
       i = 0;
