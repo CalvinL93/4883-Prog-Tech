@@ -2,7 +2,7 @@
 ### Calvin Leavy
 ### Description:
 
-Solution for Rails Problem.
+Solution for Rails Problem. Simply Reads in an order of train cars into a queue and checks to see if as they come in they should leave. Clears between input sets.
 
 ### Files
 
