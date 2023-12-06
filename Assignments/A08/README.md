@@ -2,7 +2,7 @@
 ### Calvin Leavy
 ### Description:
 
-Solution for Clock Hands Problem using Depth-First Search(DFS).
+Solution for Clock Hands Problem which is supposed to be solved using Depth-First Search(DFS). Solution was found using less code by using some simple math.
 
 ### Files
 
