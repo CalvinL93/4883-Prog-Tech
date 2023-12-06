@@ -51,6 +51,7 @@ int prim(vector<vector<Edge>>& graph, int start) {
         }
     }
 
+    // If all stations have not been visited at the end of the algirthm return -1 for failure.
     if (visitedCount != stations) {
       return -1;
     }
