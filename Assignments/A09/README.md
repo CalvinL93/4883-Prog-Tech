@@ -2,7 +2,7 @@
 ### Calvin Leavy
 ### Description:
 
-Solution for The Seasonal War problem using Breadth-First-Search(BFS).
+Solution for The Seasonal War problem using Breadth-First-Search(BFS). Uses a BFS algorithm template to traverse the graph and determine connected 1's. Finds all groups of 1's that are connected and returns how many groups found.
 
 ### Files
 
