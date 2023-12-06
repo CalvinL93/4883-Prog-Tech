@@ -2,7 +2,7 @@
 ### Calvin Leavy
 ### Description:
 
-Solution for Hardwood Species Problem.
+Solution for Hardwood Species Problem. Takes in all inputs into a vector. Organizes and counts how many appearances of each, does math and outputs results.
 
 ### Files
 
