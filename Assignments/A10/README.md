@@ -2,7 +2,7 @@
 ### Calvin Leavy
 ### Description:
 
-Solution for The Tourist Guide problem using dijkstra's algorithm for the shortest path.
+Solution for The Tourist Guide problem using dijkstra's algorithm for the shortest path. Uses a dijkstra's algorithm template and uses the results to determine how many trips are necessary to take all passengers to the destination.
 
 ### Files
 
